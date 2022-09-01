@@ -8,7 +8,7 @@ fn main() {
             println!("fizzbuzz");
         } else if n % 3 == 0 {
             println!("fizz");
-        } else if n % 5 {
+        } else if n % 5 == 0 {
             println!("buzz");
         } else {
             println!("{}", n);
