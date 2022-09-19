@@ -27,7 +27,7 @@ struct Rectangle {
 impl Rectangle {
     // this is a method
     // `&self` is sugar for `self: &self`, where `Self` is the type of the
-    // caller object. In this case `Self` = `Retangle`
+    // caller object. In this case `Self` = `Rectangle`
     fn area(&self) -> f64 {
         // `self` gives access to the struct fields via the dot operator
         let Point { x: x1, y: y1 } = self.p1;
