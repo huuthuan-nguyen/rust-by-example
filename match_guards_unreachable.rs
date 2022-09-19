@@ -1,5 +1,5 @@
 fn main() {
-    let number: i8 = -2;
+    let number: u8 = 2;
 
     match number {
         i if i == 0 => println!("Zero"),
