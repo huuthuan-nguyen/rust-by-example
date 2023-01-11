@@ -20,5 +20,8 @@ fn main() {
     // `iter()` for arrays yields `&i32`
     println!("Find 2 in array1: {:?}", array1.iter().find(|&&x| x == 2));
     // `into_iter()` for arrays yields `i32`
-    println!("Find 2 in array2: {:?}", IntoIterator::into_iter(array2).find(|&x| x == 2));
+    println!(
+        "Find 2 in array2: {:?}",
+        IntoIterator::into_iter(array2).find(|&x| x == 2)
+    );
 }

@@ -1,18 +1,21 @@
 // a function which takes a closure as an argument and calls it
 // <F> denotes that F is a "Generic type parameter"
-fn apply<F>(f: F) where
+fn apply<F>(f: F)
+where
     // the closure takes no input and returns nothing
-    F: FnOnce() {
+    F: FnOnce(),
+{
     // ^ TODO: Try changing this to `Fn` or `FnMut`
 
     f()
 }
 
 // a function which takes a closure and returns an `i32`
-fn apply_to_3<F>(f: F) -> i32 where
+fn apply_to_3<F>(f: F) -> i32
+where
     // the closure takes an `i32` and returns an `i32`
-    F: Fn(i32) -> i32 {
-
+    F: Fn(i32) -> i32,
+{
     f(3)
 }
 
@@ -22,7 +25,7 @@ fn main() {
     let greeting = "hello";
     // a non-copy type
     // `to_owned` creates owned data form borrowed one
-    let mut farewell =  "goodbye".to_owned();
+    let mut farewell = "goodbye".to_owned();
 
     // capture 2 variables: `greeting` by reference and
     // `farewell` by value
